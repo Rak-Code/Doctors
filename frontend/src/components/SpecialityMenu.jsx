@@ -12,7 +12,7 @@ const SpecialityMenu = () => {
 
         <div className='flex sm:justify-center gap-4 pt-5 w-full overflow-scroll'>
             {specialityData.map((item,index)=>(
-                <Link key={index} to={'/doctors/${item.speciality}'}>
+                <Link onClick={()=>scrollTo(0,0)} className='f;ex flex-col items-center text-sm cursor-pointer' key={index} to={'/doctors/${item.speciality}'}>
                     <img src={item.image} alt="" />
                     <p>{item.speciality}</p>
                 </Link>
